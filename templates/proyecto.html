@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <head>
+        <script src="https://d3js.org/d3.v5.min.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript"
+            src="{{ url_for('static', filename='javascript/Inicio_Ventanas.js' ) }}"></script>
+        <link rel='stylesheet' href="{{ url_for('static', filename='css/Inicio.css' ) }}" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mejora tu producto</title>
+    </head>
+    <div class="entrada" id="Reg">
+        <div class="recuadro">
+            <form action="Registro" method="post">
+                NUEVO USUARIO<br>
+                <label>Correo: </label><input name="correo" type="email" size="40"><br>
+                <label>Contraseña: </label><input name="contra" type="password" size="40"><br>
+                <button class="in">Registrarse</button>
+            </form><button onclick="return SaleReg();" class="tache">X</button>
+        </div>
+    </div>
+    <div class="entrada" id="IniSes">
+        <div class="recuadro">
+            <form action="Login" method="post">
+                INICIAR SESIÓN<br>
+                <label>Correo: </label><input name="correoo" type="email" size="40"><br>
+                <label>Contraseña: </label><input name="contraa" type="password" size="40"><br>
+                <input type="submit" class="in" value="Ingresar">
+            </form><input type="submit" onclick="return SaleSes();" class="tache" value="X">
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="one">
+            <div class="one-one">
+                <div class="PTLN">
+                    Proyecto TLN
+                </div>
+            </div>
+            <div class="one-two">
+                <div class="Registro">
+                    <a onclick="return entrar();"> Iniciar sesión </a>
+                </div>
+                <div class="Registro">
+                    <a onclick="return registrar();"> Registrarse </a>
+                </div>
+            </div>
+        </div>
+        <div class="two">
+            <div class="Presentacion">
+                <div class="Contenido">
+                    <fieldset>
+                        <legend>
+                            <label class="horizontal-legend Registro" onclick="CargarCsv()">Opción 1</label>
+                            <label class="horizontal-legend Registro" onclick="Ingresar_texto()">Opción 2</label>
+                        </legend>
+                        <div class="opc_1" id="CSV">
+                            <label>Nombre columna</label>
+                            <input type="text" autocomplete="off" class="nom_Column" name="nom_Column" required
+                                placeholder="Ingresar el nombre de la columna con los comentarios">
+                            <label for="file-1">Seleccionar archivo</label>
+                            <input name="file-1" type="file" id="file-1" class="inputfile BotonVerde" accept=".csv" />
+                            <button class="analizar" onclick="enviarSolicitud()">Analizar</button>
+                        </div>
+
+                        <div class="opc_2" id="Texto_cargar" style="display: none;">
+                            <label>Ingresar comentario a analizar:</label>
+                            <input type="textarea" class="Comentarios">
+                            <button class="analizar" onclick="enviarComentario()">Analizar</button><br>
+                            <span class="Resultado"></span>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="contenedor">
+                <!-- Nuevo div para el gráfico (inicialmente oculto) -->
+                <div class="Grafico hidden">
+                    <svg width="500" height="450"></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/Analisis.js' ) }}"></script>
+</html>

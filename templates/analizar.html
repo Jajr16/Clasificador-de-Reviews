@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Analizador de textos</title>
+</head>
+<style>
+    .Presentacion {
+        font-family: Copperplate, Copperplate Gothic Light, fantasy;
+        font-weight: bold;
+        color: black;
+        font-size: 20px;
+    }
+
+    body {
+        background-color: rgba(0, 0, 0, 0.04);
+        margin-top: 17%;
+        text-align: center;
+        height: 100%;
+        width: 99%;
+    }
+
+    .analizar {
+        background-color: #61c0ff;
+        font-family: Copperplate, Copperplate Gothic Light, fantasy;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .analizar:hover, input[type="file"]:hover, .inputfile:hover {
+        cursor: pointer;
+    }
+
+    .inputfile {
+        width: auto;
+        height: auto;
+        opacity: 0;
+        position: absolute;
+    }
+
+    .inputfile+label {
+        text-overflow: ellipsis;
+        cursor: pointer;
+        display: inline-block;
+        background-color: tomato;
+        border: solid black 2px;
+    }
+</style>
+<body>
+    <div class="two">
+        <div class="Presentacion">
+            Bienvenido, por favor carga el documento donde tengas los comentarios
+            de tu producto para ser analizados y mostrarte los resultados. <br>
+            <form action="/cargar_csv" method="POST" enctype="multipart/form-data">
+                <input name="file-1" type="file" id="file-1" class="inputfile" accept=".csv"/>
+                <label for="file-1">
+                    <span class="iborrainputfile">Seleccionar archivo</span>
+                </label>
+                <button class="analizar" onclick="analizarCSV()">Analizar</button><br><br>
+            </form>
+            O bien, ingresa aquí un ejemplo de comentario que quieras catalogar:<br>
+            <form>
+                <input type="text" size="50">
+                <button class="analizar">Analizar</button><br>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

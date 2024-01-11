@@ -1,0 +1,265 @@
+.entrada {
+    position: absolute;
+    /* background-image: url("{{ url_for('static', filename='imagenes/fondoInicio.jpg') }}"); */
+    background-position: 1% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin-left: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    visibility: hidden;
+}
+
+.tache {
+    background-color: tomato;
+    font-size: 15px;
+    font-weight: 100;
+    display: flex;
+    margin-top: -100%;
+    border-radius: 3px;
+}
+
+.in {
+    background-color: #77ff00;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.in:hover,
+.tache:hover {
+    cursor: pointer;
+}
+
+.recuadro {
+    width: 40%;
+    height: 90%;
+    background: linear-gradient(#1f013dee, #0051ff);
+    font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
+    font-weight: 500;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fcfdfcee;
+}
+
+.wrapper {
+    display: grid;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -8px;
+}
+
+.one {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: grid;
+    grid-gap: 10px;
+    background-color: #150630;
+    /* background-image: url("{{url_for('static', filename='/imagenes/fondoInicio.jpg')}}"); */
+    background-position: 1% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+}
+
+.one-one {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.one-two {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    grid-gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.Registro {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-family: Georgia, Times, Times New Roman, serif;
+    color: rgba(255, 255, 255, 0.84);
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.Registro:hover {
+    cursor: pointer;
+    transition: background-color 0.5s linear;
+    background-color: tomato;
+    color: white;
+}
+
+.two {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-gap: 10px;
+    background-color: rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 500px;
+}
+
+.three {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.PTLN {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: tomato;
+    font-size: 30px;
+    font-weight: 900;
+    font-style: italic;
+    width: auto;
+    height: auto;
+}
+
+.Presentacion {
+    max-width: 500px;
+    font-family: Gill Sans, Gill Sans MT, Calibri, sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgba(4, 6, 86, 0.8);
+    border-radius: 1rem;
+    padding: 2.5rem 0.7rem;
+    transition: all 1s; /* Transición para suavizar el cambio de tamaño y posición */
+    flex: 1; /* Se expande para llenar el espacio disponible */
+    position:relative;
+    left: 10%;
+}
+
+.footer {
+    /* background-image: url("{{ url_for('static', filename='imagenes/fondoInicio.jpg') }}"); */
+    background-position: 1% 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Georgia, Times, Times New Roman, serif;
+    color: #fcfdfcee;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    height: 100px;
+    margin-bottom: -10px;
+}
+
+label:not(.horizontal-legend), .inputfile{
+    display: block;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+fieldset {
+    padding: 2.5rem 1.5rem;
+    border: white 3px solid;
+    border-radius: 1rem;
+}
+
+.horizontal-legend {
+    display: inline;
+    padding: 0 1rem;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+.BotonVerde {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input:not([type="submit"]):not([type="checkbox"]),
+textarea,
+select {
+    width: 100%;
+    border: rgb(10, 3, 47) solid 1px;
+    border-radius: .5rem;
+    transition: all 0.3s ease 0s;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    height: 3rem;
+}
+
+.nom_Column {
+    height: 2.5rem!important;
+}
+
+.opc_2, .opc_1 {
+    overflow: hidden;
+    position: relative;
+}
+
+.Comentarios {
+    height: 3.5rem!important;
+}
+
+/* Estilo para el contenedor */
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    transition: all 1s;
+}
+
+.Grafico {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    display: none; /* Inicialmente oculto */
+    transition: opacity 1s; /* Transición para suavizar la aparición */
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Color de fondo del gráfico (ajusta según tus necesidades) */
+}
+
+.Grafico.visible {
+    display: block; /* Muestra el gráfico */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.legend-item text {
+    font-size: 14px;
+    margin-left: 5px;
+}
